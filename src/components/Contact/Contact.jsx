@@ -65,7 +65,7 @@ function Contact() {
                 <img src={papaNoel} className="card-img-top" alt="..." />
                 
                         
-                    <div className="col-10 inter contato-texto d-flex flex-column w-100">
+                    <div className="col-10 inter contato-texto d-flex flex-column w-100 p-2">
                     <h6 className="contacto-parrafo mt-5">Vamos a escribir la carta para Papá Noel</h6>
                         <h4 className="titulo-contacto" >Papá Noel yo quiero de regalo:</h4>
                         
@@ -80,19 +80,7 @@ function Contact() {
 
                         <form onSubmit={sendEmail} autoComplete="off" className="inter" >
 
-                            <div className="form-floating mb-3">
-                                <input
-                                    type="text"
-                                    className="form-control  input-styles"
-                                    name="name" id="floatingName"
-                                    placeholder="Name"
-                                    style={{ background: underline }}
-                                    onChange={updateMessage}
-                                    value={mailito.name}
-                                    required
-                                />
-                                <label htmlFor="floatingName">Nombre</label>
-                            </div>
+                            
 
                             <div className="form-floating mb-3">
 
@@ -107,6 +95,20 @@ function Contact() {
                                     value={mailito.message}
                                 />
                                 <label htmlFor="floatingMessage">{idioma ? "Message" : "Mensaje"}</label>
+                            </div>
+
+                            <div className="form-floating mb-3">
+                                <input
+                                    type="text"
+                                    className="form-control  input-styles"
+                                    name="name" id="floatingName"
+                                    placeholder="Name"
+                                    style={{ background: underline }}
+                                    onChange={updateMessage}
+                                    value={mailito.name}
+                                    required
+                                />
+                                <label htmlFor="floatingName">Nombre</label>
                             </div>
 
                             <div className="d-grid gap-2">
